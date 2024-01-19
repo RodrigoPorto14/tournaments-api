@@ -1,13 +1,13 @@
 from flask import Flask, jsonify
 from soccer import soccer_matches
-from lol import lol_matches
+from lol2 import lol_matches
 from leagues import *
 
 app = Flask(__name__)
 
 @app.route('/api/cblol', methods=['GET'])
 def cblol():
-    matches = lol_matches(cblol_2023_2, 0)
+    matches = lol_matches(cblol_2024_1, 0)
     return jsonify(matches)
 
 @app.route('/api/ucl', methods=['GET'])

@@ -2,9 +2,9 @@ from object.rule import Rule
 
 SOCCER_RULE = Rule(25,18,15,13,10)
 
-cblol_2023_2 = [
+cblol_2024_1 = [
     {
-        "url" : "https://liquipedia.net/leagueoflegends/CBLOL/2024/Split_1/Group_Stage",
+        "url" : "https://lol.fandom.com/wiki/CBLOL/2024_Season/Split_1",
         "rule" : Rule(1,0,0,0,0),
         "type" : "MD1"
     },
@@ -15,9 +15,9 @@ cblol_2023_2 = [
     # }
 ]
 
-lck_2023_summer = [
+lck_2024_spring = [
     {
-        "url" : "https://liquipedia.net/leagueoflegends/LCK/Academy/2023/Championship/Summer/Group_Stage",
+        "url" : "https://lol.fandom.com/wiki/LCK/2024_Season/Spring_Season",
         "rule" : Rule(2,1,0,0,0),
         "type" : "MD3"
     },
