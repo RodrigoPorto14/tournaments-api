@@ -33,6 +33,6 @@ def teams_score(match):
 def soccer_matches(league, base_id):
     return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time)
 
-with open('output.txt', 'w', encoding='utf-8') as file:
-    page = get_page('https://www.goal.com/br/brasileir%C3%A3o-s%C3%A9rie-a/tabela-de-classifica%C3%A7%C3%A3o/scf9p4y91yjvqvg5jndxzhxj')
-    file.write(str(page))
+# with open('output.txt', 'w', encoding='utf-8') as file:
+#     page = get_page('https://lolesports.com/schedule?leagues=cblol-brazil')
+#     file.write(str(page))

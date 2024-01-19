@@ -4,7 +4,7 @@ SOCCER_RULE = Rule(25,18,15,13,10)
 
 cblol_2023_2 = [
     {
-        "url" : "https://liquipedia.net/leagueoflegends/CBLOL/2023/Split_2/Group_Stage",
+        "url" : "https://liquipedia.net/leagueoflegends/CBLOL/2024/Split_1/Group_Stage",
         "rule" : Rule(1,0,0,0,0),
         "type" : "MD1"
     },
