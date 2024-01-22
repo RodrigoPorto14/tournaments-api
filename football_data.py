@@ -19,7 +19,7 @@ def away_team(match):
     return match["awayTeam"]
 
 def teams_name(match):
-    return home_team(match)["name"], away_team(match)["name"]
+    return home_team(match)["shortName"], away_team(match)["shortName"]
 
 def teams_img(match):
     return home_team(match)["crest"], away_team(match)["crest"]
