@@ -1,13 +1,7 @@
-from bs4 import BeautifulSoup
 from object.match import Match
 from object.team import Team
-import requests
 
-def get_page(url):
-    response = requests.get(url)
-    return BeautifulSoup(response.content, "html.parser")
-
-def get_matches(matches, teams_name, teams_img, teams_score, date_time, url, match_rule, match_type, base_id):
+def get_matches(get_page, matches, teams_name, teams_img, teams_score, date_time, url, match_rule, match_type, base_id):
     page = get_page(url)
     match_list = []
     for i, match in enumerate(matches(page)):
@@ -24,10 +18,10 @@ def get_matches(matches, teams_name, teams_img, teams_score, date_time, url, mat
     
     return match_list
         
-def generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time):
+def generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time, get_page):
     match_list = []
     for stage in league:
-        match_list += get_matches(matches, teams_name, teams_img, teams_score, date_time, stage['url'], stage['rule'], stage['type'], base_id)
+        match_list += get_matches(get_page, matches, teams_name, teams_img, teams_score, date_time, stage['url'], stage['rule'], stage['type'], base_id)
         base_id += len(match_list)
 
     return match_list

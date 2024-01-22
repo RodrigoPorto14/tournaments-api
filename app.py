@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
-from soccer import soccer_matches
-from lol2 import lol_matches
+from football_data import soccer_matches
+from lol_leaguepedia import lol_matches
 from leagues import *
 
 app = Flask(__name__)

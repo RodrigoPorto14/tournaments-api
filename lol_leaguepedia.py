@@ -1,6 +1,12 @@
-from utils import *
+from utils import generate_matches
+from bs4 import BeautifulSoup
 from datetime import datetime
 from constants import CBLOL_LOGOS
+import requests
+
+def get_page(url):
+    response = requests.get(url)
+    return BeautifulSoup(response.content, "html.parser")
 
 def matches(page):
     return page.find_all("tr", attrs = {"data-date" : True})
@@ -33,4 +39,4 @@ def teams_score(match):
     return score(match, home), score(match, away)
 
 def lol_matches(league, base_id):
-    return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time)
+    return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time, get_page)

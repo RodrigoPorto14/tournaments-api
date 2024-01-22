@@ -1,6 +1,12 @@
-from utils import *
-from datetime import datetime
+from utils import generate_matches
+from bs4 import BeautifulSoup
 import json
+
+import requests
+
+def get_page(url):
+    response = requests.get(url)
+    return BeautifulSoup(response.content, "html.parser")
 
 def matches(page):
     json_data = json.loads(page.find(id = "__NEXT_DATA__").string)
@@ -31,7 +37,7 @@ def teams_score(match):
     return (home_team(score), away_team(score)) if score else (None, None)
     
 def soccer_matches(league, base_id):
-    return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time)
+    return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time, get_page)
 
 # with open('output.txt', 'w', encoding='utf-8') as file:
 #     page = get_page('https://lolesports.com/schedule?leagues=cblol-brazil')

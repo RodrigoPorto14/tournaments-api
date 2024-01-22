@@ -30,7 +30,7 @@ lck_2024_spring = [
 
 ucl_2023 = [
     {
-        "url" : "https://www.goal.com/en/uefa-champions-league/fixtures-results/4oogyu6o156iphvdvphwpck10",
+        "url" : "https://api.football-data.org/v4/competitions/2001/matches",
         "rule" : SOCCER_RULE,
         "type" : "PLACAR"
     },
@@ -38,7 +38,7 @@ ucl_2023 = [
 
 la_liga_2023 = [
     {
-        "url" : "https://www.goal.com/en/la-liga/fixtures-results/34pl8szyvrbwcmfkuocjm3r6t",
+        "url" : "https://api.football-data.org/v4/competitions/2014/matches",
         "rule" : SOCCER_RULE,
         "type" : "PLACAR"
     },
@@ -46,7 +46,7 @@ la_liga_2023 = [
 
 premier_league_2023 = [
     {
-        "url" : "https://www.goal.com/en/premier-league/fixtures-results/2kwbbcootiqqgmrzs6o5inle5",
+        "url" : "https://api.football-data.org/v4/competitions/2021/matches",
         "rule" : SOCCER_RULE,
         "type" : "PLACAR"
     },
@@ -54,7 +54,7 @@ premier_league_2023 = [
 
 serie_a_2023 = [
     {
-        "url" : "https://www.goal.com/en/serie-a/fixtures-results/1r097lpxe0xn03ihb7wi98kao",
+        "url" : "https://api.football-data.org/v4/competitions/2019/matches",
         "rule" : SOCCER_RULE,
         "type" : "PLACAR"
     },
@@ -62,7 +62,7 @@ serie_a_2023 = [
 
 bundesliga_2023 = [
     {
-        "url" : "https://www.goal.com/en/bundesliga/fixtures-results/6by3h89i2eykc341oz7lv1ddd",
+        "url" : "https://api.football-data.org/v4/competitions/2002/matches",
         "rule" : SOCCER_RULE,
         "type" : "PLACAR"
     },
@@ -70,7 +70,7 @@ bundesliga_2023 = [
 
 ligue_1_2023 = [
     {
-        "url" : "https://www.goal.com/en/ligue-1/fixtures-results/dm5ka0os1e3dxcp3vh05kmp33",
+        "url" : "https://api.football-data.org/v4/competitions/2015/matches",
         "rule" : SOCCER_RULE,
         "type" : "PLACAR"
     },
@@ -78,7 +78,7 @@ ligue_1_2023 = [
 
 brasileiro_a_2023 = [
     {
-        "url" : "https://www.goal.com/br/brasileirao-serie-a/partidas-resultados/scf9p4y91yjvqvg5jndxzhxj",
+        "url" : "https://api.football-data.org/v4/competitions/2013/matches",
         "rule" : SOCCER_RULE,
         "type" : "PLACAR"
     },
