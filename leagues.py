@@ -7,10 +7,6 @@ LOL_MD1_RULE = Rule(1,0,0,0,0);
 LOL_MD3_RULE = Rule(2,1,0,0,0);
 LOL_MD5_RULE = Rule(3,2,0,0,0);
 
-
-def football_data_base_id(match):
-    return match["id"]
-
 def football_data_league(league_id, season):
     return League(
         [
