@@ -45,5 +45,26 @@ def _brasileiro_a():
     matches = soccer_matches(brasileiro_a["2023"])
     return jsonify(matches)
 
+@app.route('/api/eredivise', methods=['GET'])
+def _eredivise():
+    matches = soccer_matches(eredivise["2023"])
+    return jsonify(matches)
+
+@app.route('/api/liga-portugal', methods=['GET'])
+def _liga_portugal():
+    matches = soccer_matches(liga_portugal["2023"])
+    return jsonify(matches)
+
+@app.route('/api/eurocopa', methods=['GET'])
+def _eurocopa():
+    matches = soccer_matches(eurocopa["2024"])
+    return jsonify(matches)
+
+@app.route('/api/world-cup', methods=['GET'])
+def _world_cup():
+    matches = soccer_matches(world_cup["2022"])
+    return jsonify(matches)
+
+
 if __name__ == '__main__':
     app.run()

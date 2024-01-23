@@ -88,26 +88,18 @@ brasileiro_a = {
     "2023" : football_data_league(2013, 2023),
 }
 
-# eredivise_2023 = [
-#     {
-#         "url" : "https://api.football-data.org/v4/competitions/2003/matches",
-#         "rule" : SOCCER_RULE,
-#         "type" : "PLACAR"
-#     },
-# ]
+eredivise = {
+    "2023" : football_data_league(2003, 2023),
+}
 
-# liga_portugal_2023 = [
-#     {
-#         "url" : "https://api.football-data.org/v4/competitions/2017/matches",
-#         "rule" : SOCCER_RULE,
-#         "type" : "PLACAR"
-#     },
-# ]
+liga_portugal = {
+    "2023" : football_data_league(2017, 2023),
+}
 
-# eurocopa_2024 = [
-#     {
-#         "url" : "https://api.football-data.org/v4/competitions/2018/matches",
-#         "rule" : SOCCER_RULE,
-#         "type" : "PLACAR"
-#     },
-# ]
+eurocopa = {
+    "2024" : football_data_league(2018, 2024),
+}
+
+world_cup = {
+    "2022" : football_data_league(2000, 2022),
+}
