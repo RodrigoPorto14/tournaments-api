@@ -31,5 +31,8 @@ def teams_score(match):
 def date_time(match):
     return match["utcDate"]
 
-def soccer_matches(league, base_id):
-    return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time, get_page)
+def get_id(match):
+    return match["id"]
+
+def soccer_matches(league):
+    return generate_matches(league, get_page, matches, teams_name, teams_img, teams_score, date_time, get_id)

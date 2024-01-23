@@ -38,5 +38,5 @@ def teams_score(match):
     home, away = teams_name(match)
     return score(match, home), score(match, away)
 
-def lol_matches(league, base_id):
-    return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time, get_page)
+def lol_matches(league):
+    return generate_matches(league, get_page, matches, teams_name, teams_img, teams_score, date_time, None)

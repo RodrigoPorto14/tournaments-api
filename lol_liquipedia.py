@@ -41,5 +41,5 @@ def teams_score(match):
     home, away = match.find_all('div', class_ = "brkts-matchlist-cell-content")[1:3]
     return home.string, away.string
 
-def lol_matches(league, base_id):
-    return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time, get_page)
+def lol_matches(league):
+    return generate_matches(league, get_page, matches, teams_name, teams_img, teams_score, date_time, None)

@@ -36,8 +36,8 @@ def teams_score(match):
     score = match["score"]
     return (home_team(score), away_team(score)) if score else (None, None)
     
-def soccer_matches(league, base_id):
-    return generate_matches(league, base_id, matches, teams_name, teams_img, teams_score, date_time, get_page)
+def soccer_matches(league):
+    return generate_matches(league, get_page, matches, teams_name, teams_img, teams_score, date_time, None)
 
 # with open('output.txt', 'w', encoding='utf-8') as file:
 #     page = get_page('https://lolesports.com/schedule?leagues=cblol-brazil')

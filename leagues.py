@@ -1,75 +1,91 @@
 from object.rule import Rule
+from object.league import League
+from object.stage import Stage
 
 SOCCER_RULE = Rule(25,18,15,13,10)
 LOL_MD1_RULE = Rule(1,0,0,0,0);
 LOL_MD3_RULE = Rule(2,1,0,0,0);
 LOL_MD5_RULE = Rule(3,2,0,0,0);
 
-def football_data_stage(league_id, season):
-    stage = {
-        "url" : f'https://api.football-data.org/v4/competitions/{league_id}/matches?season={season}',
-        "rule" : SOCCER_RULE,
-        "type" : "PLACAR"
-    }
-    return stage
+
+def football_data_base_id(match):
+    return match["id"]
+
+def football_data_league(league_id, season):
+    return League(
+        [
+            Stage(
+                f'https://api.football-data.org/v4/competitions/{league_id}/matches?season={season}',
+                SOCCER_RULE,
+                "PLACAR",
+            )
+        ],
+        None
+    )
 
 
 cblol = {
-    "2024-1" : [
-        {
-            "url" : "https://lol.fandom.com/wiki/CBLOL/2024_Season/Split_1",
-            "rule" : LOL_MD1_RULE,
-            "type" : "MD1"
-        },
-        # {
-        #     "url" : "https://lol.fandom.com/wiki/CBLOL/2023_Season/Split_2_Playoffs",
-        #     "rule" : LOL_PLAYOFFS_RULE,
-        #     "type" : "MD5"
-        # }
-    ]
+    "2024-1" : League(
+        [
+            Stage(
+                "https://lol.fandom.com/wiki/CBLOL/2024_Season/Split_1",
+                LOL_MD1_RULE,
+                "MD1",
+            ),
+            # Stage(
+            #     "https://lol.fandom.com/wiki/CBLOL/2024_Season/Split_1_Playoffs",
+            #     LOL_MD3_RULE,
+            #     "MD3",
+            # )
+        ],
+        0
+    )
 }
 
 lck = {
-    "2024-1" : [
-        {
-            "url" : "https://lol.fandom.com/wiki/LCK/2024_Season/Spring_Season",
-            "rule" : LOL_MD3_RULE,
-            "type" : "MD3"
-        },
-        # {
-        #     "url" : "https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Playoffs",
-        #     "rule" : LOL_MD5_RULE,
-        #     "type" : "MD5"
-        # }
-    ]   
+    "2024-1" : League(
+        [
+            Stage(
+                "https://lol.fandom.com/wiki/LCK/2024_Season/Spring_Season",
+                LOL_MD3_RULE,
+                "MD3",
+            ),
+            # Stage(
+            #     "https://lol.fandom.com/wiki/LCK/2024_Season/Spring_Playoffs",
+            #     LOL_MD5_RULE,
+            #     "MD5",
+            # )
+        ],
+        1000
+    ) 
 }
 
 ucl = {
-    "2023" : [ football_data_stage(2001, 2023) ],
+    "2023" : football_data_league(2001, 2023),
 }
 
 la_liga = {
-    "2023" : [ football_data_stage(2014, 2023) ],
+    "2023" : football_data_league(2014, 2023),
 }
 
 premier_league = {
-    "2023" : [ football_data_stage(2021, 2023) ],
+    "2023" : football_data_league(2021, 2023),
 }
 
 serie_a = {
-    "2023" : [ football_data_stage(2019, 2023) ],
+    "2023" : football_data_league(2019, 2023),
 }
 
 bundesliga = {
-    "2023" : [ football_data_stage(2002, 2023) ],
+    "2023" : football_data_league(2002, 2023),
 }
 
 ligue_1 = {
-    "2023" : [ football_data_stage(2015, 2023) ],
+    "2023" : football_data_league(2015, 2023),
 }
 
 brasileiro_a = {
-    "2023" : [ football_data_stage(2013, 2023) ],
+    "2023" : football_data_league(2013, 2023),
 }
 
 # eredivise_2023 = [
@@ -95,4 +111,3 @@ brasileiro_a = {
 #         "type" : "PLACAR"
 #     },
 # ]
-
