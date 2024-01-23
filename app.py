@@ -5,64 +5,64 @@ from leagues import *
 
 app = Flask(__name__)
 
-@app.route('/api/cblol', methods=['GET'])
-def _cblol():
-    matches = lol_matches(cblol["2024-1"])
+@app.route('/api/cblol/<season>', methods=['GET'])
+def _cblol(season):
+    matches = lol_matches(cblol[season])
     return jsonify(matches)
 
-@app.route('/api/ucl', methods=['GET'])
-def _ucl():
-    matches = soccer_matches(ucl["2023"])
+@app.route('/api/ucl/<season>', methods=['GET'])
+def _ucl(season):
+    matches = soccer_matches(ucl[season])
     return jsonify(matches)
 
-@app.route('/api/la-liga', methods=['GET'])
-def _la_liga():
-    matches = soccer_matches(la_liga["2023"])
+@app.route('/api/la-liga/<season>', methods=['GET'])
+def _la_liga(season):
+    matches = soccer_matches(la_liga[season])
     return jsonify(matches)
 
-@app.route('/api/premier-league', methods=['GET'])
-def _premier_league():
-    matches = soccer_matches(premier_league["2023"])
+@app.route('/api/premier-league/<season>', methods=['GET'])
+def _premier_league(season):
+    matches = soccer_matches(premier_league[season])
     return jsonify(matches)
 
-@app.route('/api/serie-a', methods=['GET'])
-def _serie_a():
-    matches = soccer_matches(serie_a["2023"])
+@app.route('/api/serie-a/<season>', methods=['GET'])
+def _serie_a(season):
+    matches = soccer_matches(serie_a[season])
     return jsonify(matches)
 
-@app.route('/api/bundesliga', methods=['GET'])
-def _bundesliga():
-    matches = soccer_matches(bundesliga["2023"])
+@app.route('/api/bundesliga/<season>', methods=['GET'])
+def _bundesliga(season):
+    matches = soccer_matches(bundesliga[season])
     return jsonify(matches)
 
-@app.route('/api/ligue-1', methods=['GET'])
-def _ligue_1():
-    matches = soccer_matches(ligue_1["2023"])
+@app.route('/api/ligue-1/<season>', methods=['GET'])
+def _ligue_1(season):
+    matches = soccer_matches(ligue_1[season])
     return jsonify(matches)
 
-@app.route('/api/brasileiro-a', methods=['GET'])
-def _brasileiro_a():
-    matches = soccer_matches(brasileiro_a["2023"])
+@app.route('/api/brasileiro-a/<season>', methods=['GET'])
+def _brasileiro_a(season):
+    matches = soccer_matches(brasileiro_a[season])
     return jsonify(matches)
 
-@app.route('/api/eredivise', methods=['GET'])
-def _eredivise():
-    matches = soccer_matches(eredivise["2023"])
+@app.route('/api/eredivise/<season>', methods=['GET'])
+def _eredivise(season):
+    matches = soccer_matches(eredivise[season])
     return jsonify(matches)
 
-@app.route('/api/liga-portugal', methods=['GET'])
-def _liga_portugal():
-    matches = soccer_matches(liga_portugal["2023"])
+@app.route('/api/liga-portugal/<season>', methods=['GET'])
+def _liga_portugal(season):
+    matches = soccer_matches(liga_portugal[season])
     return jsonify(matches)
 
-@app.route('/api/eurocopa', methods=['GET'])
-def _eurocopa():
-    matches = soccer_matches(eurocopa["2024"])
+@app.route('/api/eurocopa/<season>', methods=['GET'])
+def _eurocopa(season):
+    matches = soccer_matches(eurocopa[season])
     return jsonify(matches)
 
-@app.route('/api/world-cup', methods=['GET'])
-def _world_cup():
-    matches = soccer_matches(world_cup["2022"])
+@app.route('/api/world-cup/<season>', methods=['GET'])
+def _world_cup(season):
+    matches = soccer_matches(world_cup[season])
     return jsonify(matches)
 
 
