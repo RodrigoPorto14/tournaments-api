@@ -25,8 +25,10 @@ def teams_img(match):
     return home_team(match)["crest"], away_team(match)["crest"]
 
 def teams_score(match):
-    full_time_score = match["score"]["fullTime"]
-    return full_time_score["home"], full_time_score["away"]
+    score = match["score"]
+    duration = score["duration"]
+    final_score = score["fullTime"] if duration == "REGULAR" else score["regularTime"]
+    return final_score["home"], final_score["away"]
 
 def date_time(match):
     return match["utcDate"]
