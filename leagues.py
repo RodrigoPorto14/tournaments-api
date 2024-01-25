@@ -99,3 +99,7 @@ eurocopa = {
 world_cup = {
     "2022" : football_data_league(2000, 2022),
 }
+
+world_cup = {
+    "2024" : football_data_league(2152, 2024),
+}

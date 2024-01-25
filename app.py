@@ -65,6 +65,11 @@ def _world_cup(season):
     matches = soccer_matches(world_cup[season])
     return jsonify(matches)
 
+@app.route('/api/libertadores/<season>', methods=['GET'])
+def _libertadores(season):
+    matches = soccer_matches(libertadores[season])
+    return jsonify(matches)
+
 
 if __name__ == '__main__':
     app.run()
