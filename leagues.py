@@ -2,7 +2,7 @@ from object.rule import Rule
 from object.league import League
 from object.stage import Stage
 
-SOCCER_RULE = Rule(25,18,15,13,10)
+SOCCER_RULE = Rule(10,7,5,3,2);
 LOL_MD1_RULE = Rule(1,0,0,0,0);
 LOL_MD3_RULE = Rule(2,1,0,0,0);
 LOL_MD5_RULE = Rule(3,2,0,0,0);
