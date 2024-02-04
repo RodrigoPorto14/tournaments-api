@@ -10,6 +10,11 @@ def _cblol(season):
     matches = lol_matches(cblol[season])
     return jsonify(matches)
 
+@app.route('/api/cblol-academy/<season>', methods=['GET'])
+def _cblol_academy(season):
+    matches = lol_matches(cblol_academy[season])
+    return jsonify(matches)
+
 @app.route('/api/ucl/<season>', methods=['GET'])
 def _ucl(season):
     matches = soccer_matches(ucl[season])

@@ -38,6 +38,7 @@ cblol = {
     )
 }
 
+
 lck = {
     "2024-1" : League(
         [
@@ -54,6 +55,24 @@ lck = {
         ],
         1000
     ) 
+}
+
+cblol_academy = {
+    "2024-1" : League(
+        [
+            Stage(
+                "https://lol.fandom.com/wiki/CBLOL_Academy/2024_Season/Split_1",
+                LOL_MD1_RULE,
+                "MD1",
+            ),
+            # Stage(
+            #     "https://lol.fandom.com/wiki/CBLOL/2024_Season/Split_1_Playoffs",
+            #     LOL_MD3_RULE,
+            #     "MD3",
+            # )
+        ],
+        2000
+    )
 }
 
 ucl = {
