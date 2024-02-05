@@ -32,7 +32,7 @@ CBLOL_LOGOS = {
     "Los Grandes Academy" : "https://upload.wikimedia.org/wikipedia/pt/a/af/Los_Grandes_logo.png",
     "Fluxo Academy" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Fluxo_escudo.png/225px-Fluxo_escudo.png",
     "Vivo Keyd Stars Academy" : "https://api.draft5.gg/teams/1050/logo",
-    "RED Academy" : "https://upload.wikimedia.org/wikipedia/pt/d/df/RED_Canids_Kalunga.png",
+    "RED Academy" : "https://res.cloudinary.com/rivalry/image/fetch/w_34,h_34,c_fit,q_90,dpr_2/f_auto/https://raw.githubusercontent.com/lootmarket/esport-team-logos/master/league-of-legends/red-acad/red-acad-logo.png",
     "FURIA Academy" : "https://upload.wikimedia.org/wikipedia/pt/thumb/f/f9/Furia_Esports_logo.png/218px-Furia_Esports_logo.png",
     "Flamengo Academy" : "https://seeklogo.com/images/C/Clube_de_Regatas_do_Flamengo-logo-590BBD47DA-seeklogo.com.png",
     "Tropa XV" : "https://pbs.twimg.com/profile_images/1751005487577862144/2UJtk74u_400x400.jpg"
