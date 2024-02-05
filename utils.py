@@ -21,6 +21,7 @@ def get_matches(get_page, matches, teams_name, teams_img, teams_score, date_time
         
 def generate_matches(league, get_page, matches, teams_name, teams_img, teams_score, date_time, get_id):
     match_list = []
+    base_id = league.base_id
     for stage in league.stages:
         match_list += get_matches(
             get_page, 
@@ -30,12 +31,12 @@ def generate_matches(league, get_page, matches, teams_name, teams_img, teams_sco
             teams_score, 
             date_time,
             get_id,
-            league.base_id,
+            base_id,
             stage.url, 
             stage.rule, 
             stage.type, 
         )
-        if(league.base_id):
-            league.base_id += len(match_list)
+        if(base_id != None):
+             base_id += len(match_list)
 
     return match_list
