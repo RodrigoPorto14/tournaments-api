@@ -101,6 +101,7 @@ ligue_1 = {
 
 brasileiro_a = {
     "2023" : football_data_league(2013, 2023),
+    "2024" : football_data_league(2013, 2024)
 }
 
 eredivise = {
