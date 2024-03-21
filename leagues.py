@@ -28,11 +28,11 @@ cblol = {
                 LOL_MD1_RULE,
                 "MD1",
             ),
-            # Stage(
-            #     "https://lol.fandom.com/wiki/CBLOL/2024_Season/Split_1_Playoffs",
-            #     LOL_MD3_RULE,
-            #     "MD3",
-            # )
+            Stage(
+                "https://lol.fandom.com/wiki/CBLOL/2024_Season/Split_1_Playoffs",
+                LOL_MD3_RULE,
+                "MD3",
+            )
         ],
         0
     )

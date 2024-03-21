@@ -17,14 +17,17 @@ def date_time(match):
     return datetime(int(ano), int(mes), int(dia), int(hora), int(minuto)).isoformat()+'Z'    
 
 def name(team):
-    return team.parent.attrs["data-teamhighlight"]
+    tr_attributes = team.parent.attrs
+    name_attribute = "data-teamhighlight"
+    return tr_attributes[name_attribute] if name_attribute in tr_attributes else "A ser definido"
+    
 
 def teams_name(match):
     home, away = match.find_all("span", class_ = "team")
     return name(home), name(away)
 
 def img(team_name):
-    return CBLOL_LOGOS[team_name]
+    return CBLOL_LOGOS[team_name] if team_name in CBLOL_LOGOS else ''
 
 def teams_img(match):
     home, away = teams_name(match)
