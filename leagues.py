@@ -5,7 +5,7 @@ from object.stage import Stage
 SOCCER_RULE = Rule(10,7,5,3,2);
 LOL_MD1_RULE = Rule(1,0,0,0,0);
 LOL_MD3_RULE = Rule(2,1,0,0,0);
-LOL_MD5_RULE = Rule(3,2,0,0,0);
+LOL_MD5_RULE = Rule(3,1,0,0,0);
 
 def football_data_league(league_id, season):
     return League(
@@ -30,8 +30,8 @@ cblol = {
             ),
             Stage(
                 "https://lol.fandom.com/wiki/CBLOL/2024_Season/Split_1_Playoffs",
-                LOL_MD3_RULE,
-                "MD3",
+                LOL_MD5_RULE,
+                "MD5",
             )
         ],
         0
